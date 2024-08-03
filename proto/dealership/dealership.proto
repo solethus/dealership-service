@@ -5,7 +5,12 @@ package dealership;
 option go_package = "dealership/dealership";
 
 service DealershipService {
-
+  rpc GetDealerShipInfo(GetDealershipInfoRequest) returns (DealershipInfo);
+  rpc ListDealerships(ListDealershipsRequest) returns (ListDealershipsResponse);
+  rpc CreateReservation(CreateReservationRequest) returns (Reservation);
+  rpc GetReservation(GetReservationRequest) returns (Reservation);
+  rpc CancelReservation(CancelReservationRequest) returns (CancelReservationResponse);
+  rpc ListAvailableCars(ListAvailableCarsRequest) returns (ListAvailableCarsResponse);
 }
 
 message DealershipInfo {
@@ -55,10 +60,20 @@ message CancelReservationRequest {
   string reservation_id = 1;
 }
 
+message CancelReservationResponse {
+  bool success = 1;
+  string message = 2;
+}
+
 message ListAvailableCarsRequest {
   string dealership_id = 1;
   int32 page_size = 2;
   int32 page_number = 3;
+}
+
+message ListAvailableCarsResponse {
+  repeated Car car = 1;
+  int32 total_cars = 2;
 }
 
 message Car {
