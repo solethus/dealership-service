@@ -5,13 +5,13 @@ import (
 
 	"net"
 
+	pb "github.com/solethus/shared-proto/proto/dealership"
 	"google.golang.org/grpc"
 
 	"github.com/solethus/dealership-service/internal/respository"
 	"github.com/solethus/dealership-service/internal/server"
 	"github.com/solethus/dealership-service/internal/service"
 	log "github.com/solethus/dealership-service/pkg/logger"
-	pb "github.com/solethus/dealership-service/proto/dealership"
 )
 
 func main() {

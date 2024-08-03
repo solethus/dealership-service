@@ -2,8 +2,9 @@ package server
 
 import (
 	"context"
+
 	"github.com/solethus/dealership-service/internal/service"
-	pb "github.com/solethus/dealership-service/proto/dealership"
+	pb "github.com/solethus/shared-proto/proto/dealership"
 )
 
 type DealershipServer struct {

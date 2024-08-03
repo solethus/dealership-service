@@ -4,6 +4,7 @@ go 1.22.0
 
 require (
 	github.com/google/uuid v1.6.0
+	github.com/solethus/shared-proto v0.1.0
 	go.uber.org/zap v1.27.0
 	google.golang.org/grpc v1.65.0
 	google.golang.org/protobuf v1.34.2
