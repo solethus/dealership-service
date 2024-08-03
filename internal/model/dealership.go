@@ -73,3 +73,6 @@ type DealershipStats struct {
 	MostCommonBrand    string
 	AverageEmployees   float64
 }
+
+type Reservation struct {
+}
